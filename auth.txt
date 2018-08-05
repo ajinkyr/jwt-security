@@ -1,0 +1,39 @@
+Request received for GET '/oauth/authorize?response_type=code&state=&client_id=trusted-app&scope=read%20write&redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Fapi%2Ftest':
+
+Request received for GET '/oauth/authorize?response_type=code&state=user&client_id=trusted-app&scope=read%20write&redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Fapi%2Ftest':
+
+org.apache.catalina.connector.RequestFacade@816c8c
+
+servletPath:/oauth/authorize
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+upgrade-insecure-requests: 1
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Postman/6.2.3 Chrome/59.0.3071.115 Electron/1.8.4 Safari/537.36
+accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+accept-encoding: gzip, deflate
+accept-language: en-US
+cookie: JSESSIONID=087773EB564F4DE107E0456B1EC179B7
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  CsrfFilter
+  LogoutFilter
+  BasicAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+curl code-app:secret@localhost:8080/oauth/token -d grant_type=authorization_code -d client_id=code-app -d redirect_uri=http://localhost:8089/ -d code=qJVMPa
+************************************************************
+
+http://localhost:8080/oauth/authorize?response_type=code&client_id=code-app&scope=user_info&redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Fapi%2Ftest
+
+/oauth/authorize?response_type=code&client_id=code-app&scope=user_info&redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Fapi%2Ftest
